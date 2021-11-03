@@ -1,0 +1,55 @@
+.bodySceltaSensore{
+    -fx-background-image: url(Immagine_DecoroSceltaSensori.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodySensInterv{
+    -fx-background-image: url(Immagine_DecoroSensInterv.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodySensMonit{
+    -fx-background-image: url(Immagine_DecoroSensMonit.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodyResetSensori{
+    -fx-background-image: url(Immagine_DecoroResetSensori.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodyCreaOggetto{
+    -fx-background-image: url(Immagine_DecoroCreaOggetto.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodyCreaComponente{
+    -fx-background-image: url(Immagine_DecoroCreaComponente.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodyMostraStatistiche{
+    -fx-background-image: url(Immagine_DecoroMostraStatistiche.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+
+.bodyCollaudo{
+    -fx-background-image: url(businessman_DecoroCollaudo.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}
+.bodyIntervento{
+    -fx-background-image: url(Immagine_SmartHomeIntervento.jpg);
+    -fx-background-position: center;
+    -fx-background-size: inherit;
+    -fx-background-repeat:   no-repeat;
+}

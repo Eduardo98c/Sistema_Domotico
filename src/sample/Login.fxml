@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerLogin">
+   <left>
+      <AnchorPane style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="341.0" mnemonicParsing="false" onAction="#To_Register" style="-fx-background-color: #151B54;" text="Register Now" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="129.0">
+               <effect>
+                  <Bloom />
+               </effect>
+            </Button>
+            <Label layoutX="101.0" layoutY="232.0" prefHeight="36.0" prefWidth="143.0" text="Smart Home" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="162.0" fitWidth="289.0" layoutX="43.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Immagini_SceneBuilder/communication-1927697_1280-1080x675.png" />
+               </image>
+               <effect>
+                  <Reflection />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="349.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="UserField1" layoutX="87.0" layoutY="190.0" promptText="Username" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="190.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="107.0" text="User Login" textAlignment="CENTER" textFill="#0598ff" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="107.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="PassField1" layoutX="87.0" layoutY="290.0" promptText="Password" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="289.0" />
+            <ImageView fitHeight="101.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="386.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="224.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../Immagini_SceneBuilder/Apps-office-address-book-icon.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="142.0" layoutY="446.0" mnemonicParsing="false" onAction="#ValidateAccount" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="142.0">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="36.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Immagini_SceneBuilder/key-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="40.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Immagini_SceneBuilder/user-info-icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="ErrorLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="398.0" prefHeight="31.0" prefWidth="300.0" textAlignment="CENTER" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="ChoiceAccount" layoutX="98.0" layoutY="361.0" opacity="0.75" prefWidth="150.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="98.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

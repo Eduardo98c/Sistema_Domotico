@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="766.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCrea_Oggetto">
+   <children>
+      <Region prefHeight="766.0" prefWidth="1222.0" styleClass="bodyCreaOggetto" stylesheets="@../Immagini_SceneBuilder/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane prefHeight="766.0" prefWidth="1158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="id_Nome_ogg" layoutX="210.0" layoutY="75.0" prefHeight="26.0" prefWidth="227.0" />
+            <Label layoutX="14.0" layoutY="75.0" prefHeight="20.0" prefWidth="141.0" text="NOME OGGETTO" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="14.0" text="CREAZIONE OGGETTO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="150.0" prefHeight="20.0" prefWidth="148.0" text="MARCA OGGETTO" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_Marca_ogg" layoutX="210.0" layoutY="150.0" prefHeight="26.0" prefWidth="227.0" />
+            <Button layoutX="296.0" layoutY="283.0" mnemonicParsing="false" onAction="#crea_Oggetto" text="CREA " />
+            <Button layoutX="30.0" layoutY="711.0" mnemonicParsing="false" onAction="#chiudiFinestra" prefHeight="26.0" prefWidth="64.0" text="ESCI" />
+            <Button layoutX="742.0" layoutY="309.0" mnemonicParsing="false" onAction="#cancellaOggetto" prefHeight="26.0" prefWidth="283.0" text="CANCELLA LA RIGA SELEZIONATA" />
+            <AnchorPane layoutX="580.0" prefHeight="272.0" prefWidth="641.0">
+               <children>
+                  <TableView fx:id="Tabella_Oggetti" onMouseClicked="#caricaComportamenti" prefHeight="272.0" prefWidth="606.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="SerialeOggetto_col" prefWidth="108.0" text="SERIALE" />
+                      <TableColumn fx:id="NomeOggetto_col" prefWidth="142.0" text="NOME" />
+                        <TableColumn fx:id="MarcaOggetto_col" prefWidth="113.0" text="MARCA" />
+                        <TableColumn fx:id="StatoOggetto_col" prefWidth="71.0" text="STATO" />
+                        <TableColumn fx:id="StringaStato_col" prefWidth="177.0" text="STRINGA STATO" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="580.0" layoutY="383.0" prefHeight="272.0" prefWidth="641.0">
+               <children>
+                  <TableView fx:id="Tabella_Comportamenti" prefHeight="272.0" prefWidth="606.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="SerialeOggettoRif_col" prefWidth="159.0" text="SERIALE OGGETTO" />
+                        <TableColumn fx:id="ParametroComport_col" prefWidth="129.0" text="PARAMETRO" />
+                        <TableColumn fx:id="Comport_col" prefWidth="181.0" text="COMPORTAMENTO" />
+                        <TableColumn fx:id="Consumo_col" prefWidth="156.0" text="CONSUMO" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Separator layoutY="368.0" prefHeight="5.0" prefWidth="1222.0" />
+            <Button layoutX="742.0" layoutY="711.0" mnemonicParsing="false" onAction="#cancellaComportamento" prefHeight="26.0" prefWidth="283.0" text="CANCELLA LA RIGA SELEZIONATA" />
+            <Label layoutX="94.0" layoutY="390.0" text="CREAZIONE COMPORTAMENTO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="477.0" prefHeight="20.0" prefWidth="192.0" text="PARAMETRO OGGETTO" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="552.0" prefHeight="20.0" prefWidth="157.0" text="COMPORTAMENTO" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="id_Combobox_Par" layoutX="250.0" layoutY="477.0" onMouseClicked="#caricaParametri" prefHeight="26.0" prefWidth="260.0" />
+            <ComboBox fx:id="id_Combobox_Comp" layoutX="250.0" layoutY="552.0" prefHeight="26.0" prefWidth="260.0" />
+            <Button layoutX="331.0" layoutY="711.0" mnemonicParsing="false" onAction="#creaComportamento" text="CREA " />
+            <Label layoutX="14.0" layoutY="622.0" prefHeight="20.0" prefWidth="178.0" text="VALORE DI CONSUMO" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="id_Val_input" editable="true" layoutX="249.0" layoutY="622.0" prefHeight="26.0" prefWidth="260.0" />
+            <Label layoutX="83.0" layoutY="418.0" prefHeight="16.0" prefWidth="332.0" text="(SELEZIONA UN OGGETTO DALLA PRIMA TABELLA)" textFill="WHITE" />
+            <Label fx:id="Err_text_ogg" alignment="CENTER" layoutX="173.0" layoutY="249.0" prefHeight="16.0" prefWidth="301.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="Err_text_Comp" alignment="CENTER" layoutX="203.0" layoutY="677.0" prefHeight="16.0" prefWidth="301.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

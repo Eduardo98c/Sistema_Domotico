@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerIntervento">
+   <children>
+      <Region prefHeight="800.0" prefWidth="1280.0" styleClass="bodyIntervento" stylesheets="@../Immagini_SceneBuilder/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <BorderPane prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="800.0" prefWidth="249.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="31.0" text="INFORMAZIONI ACCOUNT" textAlignment="JUSTIFY" textFill="#030000">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Name" editable="false" layoutX="39.0" layoutY="194.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <TextField fx:id="Id" editable="false" layoutX="39.0" layoutY="103.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <TextField fx:id="Lastname" editable="false" layoutX="39.0" layoutY="285.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <TextField fx:id="Email" editable="false" layoutX="39.0" layoutY="376.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <TextField fx:id="User" editable="false" layoutX="39.0" layoutY="467.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <TextField fx:id="pass" editable="false" layoutX="39.0" layoutY="558.0" prefHeight="5.0" prefWidth="158.0" style="-fx-border-color: #0598ff;" />
+                  <Button layoutX="88.0" layoutY="727.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #0598ff;" text="Logout" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label layoutX="39.0" layoutY="79.0" prefHeight="16.0" prefWidth="44.0" text="Id" />
+                  <Label layoutX="40.0" layoutY="169.0" prefHeight="16.0" prefWidth="43.0" text="Nome" />
+                  <Label layoutX="39.0" layoutY="263.0" text="Cognome" />
+                  <Label layoutX="39.0" layoutY="352.0" prefHeight="16.0" prefWidth="45.0" text="Email" />
+                  <Label layoutX="39.0" layoutY="444.0" text="Username" />
+                  <Label layoutX="39.0" layoutY="536.0" text="Password" />
+                  <Separator layoutX="248.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="4.0" style="-fx-background-color: #4C7D7E;" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="Tabella_Oggetti" layoutX="8.0" layoutY="92.0" onMousePressed="#attivaInterruttore" prefHeight="262.0" prefWidth="617.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="401.0">
+                     <columns>
+                        <TableColumn fx:id="SerialeOggetto_col" prefWidth="103.0" text="SERIALE" />
+                        <TableColumn fx:id="NomeOggetto_col" prefWidth="130.0" text="NOME" />
+                        <TableColumn fx:id="MarcaOggetto_col" prefWidth="129.0" text="MARCA" />
+                        <TableColumn fx:id="StatoOggetto_col" prefWidth="77.0" text="STATO" />
+                        <TableColumn fx:id="StringaStato_col" prefWidth="186.0" text="STRINGA STATO" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="411.0" layoutY="14.0" prefHeight="21.0" prefWidth="181.0" text="CASA DOMOTICA" textAlignment="JUSTIFY" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="434.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="id_bottone_interr" disable="true" layoutX="248.0" layoutY="377.0" mnemonicParsing="false" onAction="#interruttoreOggetto" prefHeight="26.0" prefWidth="137.0" text="INTERRUTTORE" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="641.0" />
+                  <TableView fx:id="Tabella_Parametri" layoutX="14.0" layoutY="549.0" prefHeight="225.0" prefWidth="508.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="14.0">
+                     <columns>
+                        <TableColumn fx:id="Parametro_col" prefWidth="151.0" text="PARAMETRO" />
+                        <TableColumn fx:id="Unita_col" prefWidth="192.0" text="UNITA' DI MISURA" />
+                        <TableColumn fx:id="Valore_col" prefWidth="160.0" text="VALORE" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="213.0" layoutY="63.0" prefHeight="21.0" prefWidth="207.0" text="CONTROLLO OGGETTI" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="606.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="158.0" layoutY="503.0" text="CONTROLLO PARAMETRI CASA ">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="Table_AllarmiSensor" layoutX="639.0" layoutY="92.0" prefHeight="305.0" prefWidth="373.0" AnchorPane.rightAnchor="14.0" />
+                  <Label layoutX="693.0" layoutY="63.0" text="ALLARMI SENSORI SCATTATI">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="Table_AggiornVal" layoutX="572.0" layoutY="549.0" prefHeight="191.0" prefWidth="438.0" />
+                  <Button layoutX="760.0" layoutY="761.0" mnemonicParsing="false" onAction="#clearAggiornamentoVal" text="CLEAR" />
+                  <Label layoutX="686.0" layoutY="503.0" text="AGGIORNAMENTO VALORI">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="795.0" layoutY="415.0" mnemonicParsing="false" onAction="#clearSensoriScatt" text="CLEAR" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMostraStatistiche">
+   <children>
+      <Region opacity="0.94" prefHeight="800.0" prefWidth="1280.0" styleClass="bodyMostraStatistiche" stylesheets="@../Immagini_SceneBuilder/Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutY="250.0" prefHeight="0.0" prefWidth="1280.0" />
+            <Label layoutX="511.0" layoutY="270.0" prefHeight="21.0" prefWidth="232.0" text="SENSORI INTERVENTO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="499.0" layoutY="14.0" text="SENSORI MONITORAGGIO" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Tabella_Monit" layoutY="50.0" prefHeight="163.0" prefWidth="1280.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="colM_Nome" prefWidth="158.0" text="NOME" />
+                  <TableColumn fx:id="colM_Stato" prefWidth="59.0" text="STATO" />
+                  <TableColumn fx:id="colM_StringaStat" prefWidth="147.0" text="STRINGA_STATO" />
+                  <TableColumn fx:id="colM_DataCreaz" prefWidth="170.0" text="DATA CREAZIONE" />
+                  <TableColumn fx:id="colM_DataAllarm" prefWidth="157.0" text="DATA ALLARME" />
+                  <TableColumn fx:id="colM_Parametro" prefWidth="235.0" text="PARAMETRO_RIF" />
+                  <TableColumn fx:id="colM_ValPos" prefWidth="105.0" text="Val_Pos" />
+                  <TableColumn fx:id="colM_ValMed" prefWidth="117.0" text="Val_Med" />
+                  <TableColumn fx:id="colM_ValCrit" prefWidth="122.0" text="Val_Crit" />
+               </columns>
+            </TableView>
+            <Button layoutX="27.0" layoutY="748.0" mnemonicParsing="false" onAction="#chiudiFinestra" prefHeight="26.0" prefWidth="73.0" text="ESCI" />
+            <TableView fx:id="Tabella_Interv" layoutY="300.0" prefHeight="182.0" prefWidth="1280.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="colI_Nome" prefWidth="156.0" text="NOME" />
+                  <TableColumn fx:id="colI_Stato" prefWidth="64.0" text="STATO" />
+                  <TableColumn fx:id="colI_StringaStat" prefWidth="130.0" text="STRINGA_STATO" />
+                  <TableColumn fx:id="colI_DataCreaz" prefWidth="140.0" text="DATA CREAZIONE" />
+                  <TableColumn fx:id="colI_DataAllarm" prefWidth="156.0" text="DATA ALLARME" />
+                  <TableColumn fx:id="colI_Parametro" prefWidth="153.0" text="PARAMETRO_RIF" />
+                  <TableColumn fx:id="colI_Descrizione_Azione" prefWidth="263.0" text="DESCRIZIONE AZIONE" />
+                  <TableColumn fx:id="colI_Comportamento_Azione" prefWidth="202.0" text="COMPORTAMENTO AZIONE" />
+               </columns>
+            </TableView>
+            <TableView fx:id="Tabella_Componente" layoutX="-4.0" layoutY="549.0" prefHeight="109.0" prefWidth="590.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="colC_Nome" prefWidth="178.0" text="NOME COMPONENTE" />
+                  <TableColumn fx:id="colC_Data_Creazione" prefWidth="210.0" text="DATA CREAZIONE" />
+                  <TableColumn fx:id="colC_Descrizione_Azione" prefWidth="187.0" text="DESCRIZIONE AZIONE" />
+               </columns>
+            </TableView>
+            <Separator layoutY="510.0" prefHeight="0.0" prefWidth="1280.0" />
+            <Label layoutX="224.0" layoutY="518.0" prefHeight="21.0" prefWidth="139.0" text="COMPONENTI" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Tabella_Oggetti" layoutX="696.0" layoutY="549.0" prefHeight="109.0" prefWidth="584.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="SerialeOggetto_col" prefWidth="99.0" text="SERIALE" />
+                  <TableColumn fx:id="NomeOggetto_col" prefWidth="87.0" text="NOME" />
+                  <TableColumn fx:id="MarcaOggetto_col" prefWidth="107.0" text="MARCA" />
+                  <TableColumn fx:id="StatoOggetto_col" prefWidth="73.0" text="STATO" />
+                  <TableColumn fx:id="StringaStato_col" prefWidth="234.0" text="STRINGA STATO" />
+               </columns>
+            </TableView>
+            <Label layoutX="946.0" layoutY="518.0" prefHeight="21.0" prefWidth="96.0" text="OGGETTI" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="577.0" layoutY="672.0" prefHeight="21.0" prefWidth="126.0" text="PARAMETRI" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Tabella_Parametri" layoutX="443.0" layoutY="705.0" prefHeight="81.0" prefWidth="390.0" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="Parametro_col" prefWidth="114.0" text="PARAMETRO" />
+                  <TableColumn fx:id="Unita_col" prefWidth="147.0" text="UNITA' DI MISURA" />
+                  <TableColumn fx:id="Valore_col" prefWidth="109.0" text="VALORE" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

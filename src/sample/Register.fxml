@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" style="-fx-background-color: ffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerRegister">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <BorderPane maxHeight="400.0" maxWidth="800.0" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: ffff;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <right>
+            <AnchorPane prefHeight="500.0" prefWidth="261.0" style="-fx-background-color: ffff;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" text="Account Collaudo" textAlignment="CENTER" textFill="#0709eb">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="UserField2" layoutX="33.0" layoutY="303.0" onKeyReleased="#VerifyUsername2" promptText="Username" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="EmailField2" layoutX="33.0" layoutY="234.0" onKeyReleased="#VerifyEmail2" promptText="Email" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="LastNameField2" layoutX="33.0" layoutY="165.0" onKeyReleased="#VerifyLastName2" promptText="Last Name" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="NameField2" layoutX="33.0" layoutY="96.0" onKeyReleased="#VerifyName2" promptText="Name" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="Reg2" layoutX="85.0" layoutY="445.0" mnemonicParsing="false" onAction="#RegisterNewCollaudo" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #0709eb;" text="Register" textFill="WHITE" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="87.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <PasswordField fx:id="PassField2" layoutX="33.0" layoutY="372.0" onKeyReleased="#VerifyPass2" promptText="Password" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <Label fx:id="ErrName2" contentDisplay="CENTER" layoutX="33.0" layoutY="81.0" prefHeight="14.0" prefWidth="212.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrLastName2" contentDisplay="CENTER" layoutX="33.0" layoutY="150.0" prefHeight="14.0" prefWidth="212.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrEmail2" contentDisplay="CENTER" layoutX="33.0" layoutY="219.0" prefHeight="15.0" prefWidth="209.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrUser2" contentDisplay="CENTER" layoutX="33.0" layoutY="288.0" prefHeight="14.0" prefWidth="209.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrPass2" contentDisplay="CENTER" layoutX="33.0" layoutY="349.0" prefHeight="14.0" prefWidth="209.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="254.0" style="-fx-background-color: ffff;" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <TextField fx:id="UserField1" layoutX="33.0" layoutY="303.0" onKeyReleased="#VerifyUsername1" promptText="Username" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="PassField1" layoutX="33.0" layoutY="372.0" onKeyReleased="#VerifyPass1" promptText="Password" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="EmailField1" layoutX="33.0" layoutY="234.0" onKeyReleased="#VerifyEmail1" promptText="Email" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="25.0" prefHeight="25.0" prefWidth="175.0" text="Account Attivato" textAlignment="CENTER" textFill="#eb0707">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="85.0" layoutY="445.0" mnemonicParsing="false" onAction="#RegisterNewAttivato" prefHeight="26.0" prefWidth="75.0" style="-fx-background-color: #eb0707;" text="Register" textFill="WHITE" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="94.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Label fx:id="ErrUser1" contentDisplay="CENTER" layoutX="33.0" layoutY="288.0" prefHeight="14.0" prefWidth="209.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="LastNameField1" layoutX="33.0" layoutY="165.0" onKeyReleased="#VerifyLastName1" prefHeight="28.0" prefWidth="171.0" promptText="Last Name" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="NameField1" layoutX="33.0" layoutY="96.0" onKeyReleased="#VerifyName1" promptText="Name" style="-fx-border-color: #0598ff; -fx-background-color: rgba(53,89,119,0); -fx-border-width: 0px 0px 2px 0px;" />
+                  <Label fx:id="ErrName1" contentDisplay="CENTER" layoutX="33.0" layoutY="81.0" prefHeight="14.0" prefWidth="212.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrLastName1" contentDisplay="CENTER" layoutX="33.0" layoutY="150.0" prefHeight="14.0" prefWidth="212.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrEmail1" contentDisplay="CENTER" layoutX="33.0" layoutY="219.0" prefHeight="15.0" prefWidth="221.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ErrPass1" contentDisplay="CENTER" layoutX="33.0" layoutY="357.0" prefHeight="14.0" prefWidth="209.0" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="436.0" prefWidth="280.0" style="-fx-background-color: ffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView blendMode="SRC_ATOP" fitHeight="212.0" fitWidth="293.0" focusTraversable="true" layoutX="-3.0" layoutY="156.0" nodeOrientation="INHERIT" opacity="0.34" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-10.0">
+                     <image>
+                        <Image url="@../Immagini_SceneBuilder/smart-home-come-funziona-domotiche-definizione-tecnologia-predisposizione.jpg" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ImageView>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="445.0" mnemonicParsing="false" onAction="#BackToLogin" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #43C6DB;" text="Back" textAlignment="CENTER" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
